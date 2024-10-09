@@ -1,95 +1,52 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import React from "react";
+import Link from "next/link"
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
+    <header>
+      <nav>
+        <div className="left">Salwa's Web-Page</div>
+        <div className="right">
+        <ul>
+          {/* <li><a href="/">Main Home</a></li>
+          <li><a href="/about"><b><i><u>About</u></i></b></a></li>
+          <li><a href="/contact"><b><i><u>Contact</u></i></b></a></li>
+          <li><a href="/home"><b><i><u>Home</u></i></b></a></li>
+          <li><a href="/services"><b><i><u>Services</u></i></b></a></li>
+          <li><a href="/services/web-services"><b><i><u>Web-Services</u></i></b></a></li> */}
           <li>
-            Get started by editing <code>src/app/page.tsx</code>.
+            <Link href="/" target="_blank">
+            <b><u><i>Main HomePage</i></u></b>
+            </Link>
           </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+          <li>
+            <Link href="/about" target="_blank">
+            <b><u><i>About</i></u></b>
+            </Link>
+          </li>
+          <li>
+            <Link href="/contact" target="_blank">
+            <b><u><i>Contact</i></u></b>
+            </Link>
+          </li>
+          <li>
+            <Link href="/Home" target="_blank">
+            <b><u><i>Home</i></u></b>
+            </Link>
+          </li>
+          <li>
+            <Link href="/services" target="_blank">
+            <b><u><i>Services</i></u></b>
+            </Link>
+          </li>
+          <li>
+            <Link href="/services/web-services" target="_blank">
+            <b><u><i>Web-Services</i></u></b>
+            </Link>
+          </li>
+        </ul>
         </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+      </nav>
+    </header>
+  )
 }
